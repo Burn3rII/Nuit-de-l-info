@@ -10,15 +10,15 @@ function konami_game(){
 function konami(key){
     if(key==code[indexkonami]){
         indexkonami++;
-        if(indexkonami==9){
+        if(indexkonami==8){
             konami_game();
+            indexkonami=0;
         }
     }
     else indexkonami=0;
 }
 
-
-document.eventEventListener('keypress',(event)=>{
+document.addEventListener('keydown',(event)=>{
     var name=event.key;
     var namemaj=name.toUpperCase();
     switch(name)
@@ -29,7 +29,7 @@ document.eventEventListener('keypress',(event)=>{
         case "ArrowRight": konami("Right"); break;
     }
     switch(namemaj){
-        case "A": konami("A"); break;
         case "B": konami("B"); break;
+        case "A": konami("A"); break;
     }
 })
