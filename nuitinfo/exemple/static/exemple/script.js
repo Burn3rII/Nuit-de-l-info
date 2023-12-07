@@ -1,8 +1,11 @@
 
 // Konami code
 
-const code=["Up";"Up";"Down";"Down";"Left";"Right";"B";"A"];
+const code=["Up","Up","Down","Down","Left","Right","B","A"];
 var indexkonami=0;
+function konami_game(){
+    alert("HELLO from js");
+}
 
 function konami(key){
     if(key==code[indexkonami]){
