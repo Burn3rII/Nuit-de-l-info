@@ -21,3 +21,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("exemple/", include("exemple.urls")),
 ]
+#test commit
