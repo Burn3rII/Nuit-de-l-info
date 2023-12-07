@@ -64,4 +64,4 @@ la commande `pip freeze > ./requirements.txt` au plus haut niveau.
 Par défaut, la vue Pycharm permet seulement la lecture des fichiers .md. 
 Lorsqu'un fichier .md est ouvert, en haut à droite de la fenêtre se 
 trouvent 3 boutons permettant de modifier la vue du fichier (preview seule, 
-édition seule, édition + preview à côté)
+édition seule, édition + preview à côté).
