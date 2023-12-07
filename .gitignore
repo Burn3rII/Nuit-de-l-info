@@ -4,4 +4,5 @@
 
 nuitinfo/exemple/__pycache__/*
 nuitinfo/nuitinfo/__pycache__/*
+nuitinfo/exemple/migrations/__pycache__/*
 nuitinfo/**/__pycache__
