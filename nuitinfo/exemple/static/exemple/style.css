@@ -9,7 +9,6 @@ img{
     background-color: grey;
     top: 0px;
     text-align: center;
-    padding: 2%;
     display: flex;
     width : 100%;
 
@@ -25,7 +24,7 @@ ul{
 }
 li{
     display : inline-block;
-    margin:0px 5% 0px;
+    
 }
 #bouton{
     width:50%;
@@ -46,7 +45,7 @@ footer{
     width:100%;
 }
 #corps-page {
-    margin: 0px 10% 0px;
+    
     height: 100%;
     background-color: brown;
 }
