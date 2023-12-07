@@ -1,0 +1,22 @@
+{% extends "exemple/baseLayout.html" %}
+{% load static %}
+
+{% if task %}
+    {% block title %} Détails de la tâche : {{ task.name }} {%endblock %}
+{% else %}
+    <p>Cette tâche n'existe pas.</p>
+{% endif %}
+
+{% block content %}
+    {% if doers %}
+        <h2>Personnes assignées à cette tâche :</h2>
+        <ul>
+            {% for doer in doers %}
+            <li><a href="{% url 'exemple:user_details' doer.id %}">
+                {{ doer.lastname }} {{ doer.firstname }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucune personne assignée à cette tâche.</p>
+    {% endif %}
+{% endblock %}

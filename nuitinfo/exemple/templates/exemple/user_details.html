@@ -1,0 +1,21 @@
+{% extends "exemple/baseLayout.html" %}
+{% load static %}
+
+{% block title %} Fiche personnelle : {%endblock %}
+{% block content %}
+    {% if user %}
+        <p>Nom : {{ user.lastname }}</p>
+        <p>Prénom : {{ user.firstname }}</p>
+        <p>Adresse email : {% if email %} {{ email.email }} {% else %}
+            Aucune adresse email n'a été renseignée. {% endif %}</p>
+        <p>Liste des tâches assignées à la personne :</p>
+        <ul>
+            {% for task in tasks %}
+            <li><a href="{% url 'exemple:task_details' task.id %}">
+                {{ task.name }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Cette personne n'existe pas.</p>
+    {% endif %}
+{% endblock %}

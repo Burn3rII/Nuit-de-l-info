@@ -1,0 +1,28 @@
+<!doctype HTML>
+{% load static %}
+<html lang="fr">
+    <head>
+        <meta charset="utf_8"/>
+        <title>Application de gestion de projet</title>
+        {% block styles %}
+            <link rel="stylesheet"
+                  href="{% static 'exemple/style.css' %}"/>
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <h1>{% block title %} {% endblock %}</h1>
+        </header>
+        <section>
+            {% block content %} {% endblock %}
+        </section>
+        <footer>
+            Copyright ENSISA IR 1A
+        </footer>
+
+        {% block js %}
+            <script type="text/javascript"
+                    src="{% static 'exemple/script.js' %}"></script>
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,43 @@
+{% extends "exemple/baseLayout.html" %}
+{% load static %}
+
+{% block title %} Bienvenue dans votre application de gestion de projets.
+{%endblock %}
+{% block content %}
+    <h2>Liste des tâches :</h2>
+    {% if tasks_list %}
+        <ul>
+            {% for task in tasks_list %}
+            <li><a href="{% url 'exemple:task_details' task.id %}">
+                {{ task.name }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Pas de tâches créées.</p>
+    {% endif %}
+
+    <h2>Liste des personnes :</h2>
+    {% if users_list %}
+        <ul>
+            {% for user in users_list %}
+            <li><a href="{% url 'exemple:user_details' user.id %}">
+                {{ user.lastname }} {{ user.firstname }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Pas d'utilisateurs créés.</p>
+    {% endif %}
+
+    <h2>Groupes :</h2>
+    {% if diffusion_lists_list %}
+        <ul>
+            {% for diffusion_list in diffusion_lists_list %}
+            <li><a
+                    href="{% url 'exemple:diffusion_list_details' diffusion_list.id %}">
+                {{ diffusion_list.name }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Pas de groupes créés.</p>
+    {% endif %}
+{% endblock %}
