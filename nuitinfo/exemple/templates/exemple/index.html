@@ -2,11 +2,14 @@
 {% load static %}
 
 {% block header %} 
-<section id="bande-top">
-    <div id="logo" class="div">
-        <img src="{% static 'exemple/img/Logo_Site.png' %}" alt="Logo représentant un sapin" height="80px" width="80px" />
+
+    <div class="head-left">
+        <img src="{% static 'exemple/img/logo.png' %}" alt="Logo représentant un arbre" height="100px" width="100px" />
     </div>
-    <div id="bouton" class="div">
+    <div>
+        <p id="title">- Mon site</p>
+    </div>
+    <div class="head-right">
         <ul>
             <li id="bouton1" href>Bouton1</li>
             <li id="bouton2" href>Bouton2</li>
@@ -14,19 +17,10 @@
             <li id="param" href>param</li>
         </ul>
     </div>
-</section>
-<div id="nav-top">
-    <nav>
-        <a>Appli n°1</a>
-        <a>Appli n°2</a>
-        <a>Appli n°3</a>
-        <a>Appli n°4</a>
-    </nav>
-</div>
 {%endblock %}
 
 {% block content %}
-<section id="corps-page">
+<section >
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
         Etiam vel ante vitae mi bibendum tristique feugiat vel ipsum. 
         Proin non libero semper, porttitor orci ut, sagittis enim. 
@@ -39,6 +33,43 @@
         Integer interdum, metus eget dignissim mattis, leo dui porttitor nisl, quis posuere tellus ante nec tellus. 
         Aenean quam nulla, dictum eget egestas eget, vehicula sit amet est. 
         Nunc quis placerat nulla, non egestas turpis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Etiam vel ante vitae mi bibendum tristique feugiat vel ipsum. 
+            Proin non libero semper, porttitor orci ut, sagittis enim. 
+            Morbi finibus gravida quam at molestie. 
+            Duis egestas sollicitudin hendrerit. 
+            Curabitur consequat justo eu erat ornare feugiat. 
+            Vivamus sed purus condimentum, tempus mi ut, feugiat enim. 
+            Fusce mattis nibh cursus pharetra imperdiet. Pellentesque id aliquam turpis, in posuere felis. 
+            Suspendisse varius finibus ultricies. 
+            Integer interdum, metus eget dignissim mattis, leo dui porttitor nisl, quis posuere tellus ante nec tellus. 
+            Aenean quam nulla, dictum eget egestas eget, vehicula sit amet est. 
+            Nunc quis placerat nulla, non egestas turpis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Etiam vel ante vitae mi bibendum tristique feugiat vel ipsum. 
+                Proin non libero semper, porttitor orci ut, sagittis enim. 
+                Morbi finibus gravida quam at molestie. 
+                Duis egestas sollicitudin hendrerit. 
+                Curabitur consequat justo eu erat ornare feugiat. 
+                Vivamus sed purus condimentum, tempus mi ut, feugiat enim. 
+                Fusce mattis nibh cursus pharetra imperdiet. Pellentesque id aliquam turpis, in posuere felis. 
+                Suspendisse varius finibus ultricies. 
+                Integer interdum, metus eget dignissim mattis, leo dui porttitor nisl, quis posuere tellus ante nec tellus. 
+                Aenean quam nulla, dictum eget egestas eget, vehicula sit amet est. 
+                Nunc quis placerat nulla, non egestas turpis.</p>
+                <img src="{% static 'exemple/img/logo.png' %}" alt="Logo représentant un arbre" height="100px" width="100px" />
 
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Etiam vel ante vitae mi bibendum tristique feugiat vel ipsum. 
+                    Proin non libero semper, porttitor orci ut, sagittis enim. 
+                    Morbi finibus gravida quam at molestie. 
+                    Duis egestas sollicitudin hendrerit. 
+                    Curabitur consequat justo eu erat ornare feugiat. 
+                    Vivamus sed purus condimentum, tempus mi ut, feugiat enim. 
+                    Fusce mattis nibh cursus pharetra imperdiet. Pellentesque id aliquam turpis, in posuere felis. 
+                    Suspendisse varius finibus ultricies. 
+                    Integer interdum, metus eget dignissim mattis, leo dui porttitor nisl, quis posuere tellus ante nec tellus. 
+                    Aenean quam nulla, dictum eget egestas eget, vehicula sit amet est. 
+                    Nunc quis placerat nulla, non egestas turpis.</p>
 </section>
 {% endblock %}

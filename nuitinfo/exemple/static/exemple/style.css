@@ -2,50 +2,49 @@
     margin: 0;
     padding: 0;
 }
-img{
-    border-radius: 100%;
-}
 #bande-top{
     background-color: grey;
     top: 0px;
     text-align: center;
     display: flex;
     width : 100%;
-
+    height: 5%;   
 }
-#nav-top{
-    text-align: center;
-    background-color: lightgray;
+
+.head-left img{
+    border-radius: 100%;  
+    display: inline-block;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+#title{
+    margin: 100% 0;
+    text-align:center;
+    display: inline-block;
     
 }
-ul{
+
+.head-left{
+    display: inline-block;
+    width:15%;
+}
+
+.head-right{
+    margin:auto;
+    width:60%;
+    height:100%;
+    
+}
+.head-right ul{
     list-style-type: none;
-    
 }
-li{
-    display : inline-block;
-    
-}
-#bouton{
-    width:50%;
-    
-}
-#logo{
-    width:25%;
+.head-right ul li{
+    display:inline-block;
+    padding: 5%;
 }
 
-#logo p{
-    text-align: left;
+section {
+    background-image: linear-gradient(45deg,rgba(255, 0, 0, 0.902), rgb(46, 9, 46));
+    margin:2% 5%;
 }
-
-footer{
-    background-color: grey;
-    position: absolute;
-    bottom: 0px;
-    width:100%;
-}
-#corps-page {
-    
-    height: 100%;
-    background-color: brown;
-}
+/*test*/
