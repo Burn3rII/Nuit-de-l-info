@@ -11,11 +11,9 @@
     </head>
     <body>
         <header>
-            <h1>{% block title %} {% endblock %}</h1>
+            {% block header %} {% endblock %}
         </header>
-        <section>
-            {% block content %} {% endblock %}
-        </section>
+        {% block content %} {% endblock %}
         <footer>
             Copyright ENSISA IR 1A
         </footer>

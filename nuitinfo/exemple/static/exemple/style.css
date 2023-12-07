@@ -1,3 +1,52 @@
-h1 {
-    color: red;
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    border-radius: 100%;
+}
+#bande-top{
+    background-color: grey;
+    top: 0px;
+    text-align: center;
+    padding: 2%;
+    display: flex;
+    width : 100%;
+
+}
+#nav-top{
+    text-align: center;
+    background-color: lightgray;
+    
+}
+ul{
+    list-style-type: none;
+    
+}
+li{
+    display : inline-block;
+    margin:0px 5% 0px;
+}
+#bouton{
+    width:50%;
+    
+}
+#logo{
+    width:25%;
+}
+
+#logo p{
+    text-align: left;
+}
+
+footer{
+    background-color: grey;
+    position: absolute;
+    bottom: 0px;
+    width:100%;
+}
+#corps-page {
+    margin: 0px 10% 0px;
+    height: 100%;
+    background-color: brown;
 }

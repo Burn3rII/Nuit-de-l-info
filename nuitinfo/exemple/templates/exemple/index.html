@@ -1,43 +1,44 @@
 {% extends "exemple/baseLayout.html" %}
 {% load static %}
 
-{% block title %} Bienvenue dans votre application de gestion de projets.
+{% block header %} 
+<section id="bande-top">
+    <div id="logo" class="div">
+        <img src="{% static 'exemple/img/logo.png' %}" alt="Logo représentant un arbre" height="50px" width="50px" />
+    </div>
+    <div id="bouton" class="div">
+        <ul>
+            <li id="bouton1" href>Bouton1</li>
+            <li id="bouton2" href>Bouton2</li>
+            <li id="bouton3" href>Bouton3</li>
+            <li id="param" href>param</li>
+        </ul>
+    </div>
+</section>
+<div id="nav-top">
+    <nav>
+        <a>Appli n°1</a>
+        <a>Appli n°2</a>
+        <a>Appli n°3</a>
+        <a>Appli n°4</a>
+    </nav>
+</div>
 {%endblock %}
+
 {% block content %}
-    <h2>Liste des tâches :</h2>
-    {% if tasks_list %}
-        <ul>
-            {% for task in tasks_list %}
-            <li><a href="{% url 'exemple:task_details' task.id %}">
-                {{ task.name }}</a></li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>Pas de tâches créées.</p>
-    {% endif %}
+<section id="corps-page">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Etiam vel ante vitae mi bibendum tristique feugiat vel ipsum. 
+        Proin non libero semper, porttitor orci ut, sagittis enim. 
+        Morbi finibus gravida quam at molestie. 
+        Duis egestas sollicitudin hendrerit. 
+        Curabitur consequat justo eu erat ornare feugiat. 
+        Vivamus sed purus condimentum, tempus mi ut, feugiat enim. 
+        Fusce mattis nibh cursus pharetra imperdiet. Pellentesque id aliquam turpis, in posuere felis. 
+        Suspendisse varius finibus ultricies. 
+        Integer interdum, metus eget dignissim mattis, leo dui porttitor nisl, quis posuere tellus ante nec tellus. 
+        Aenean quam nulla, dictum eget egestas eget, vehicula sit amet est. 
+        Nunc quis placerat nulla, non egestas turpis.</p>
 
-    <h2>Liste des personnes :</h2>
-    {% if users_list %}
-        <ul>
-            {% for user in users_list %}
-            <li><a href="{% url 'exemple:user_details' user.id %}">
-                {{ user.lastname }} {{ user.firstname }}</a></li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>Pas d'utilisateurs créés.</p>
-    {% endif %}
-
-    <h2>Groupes :</h2>
-    {% if diffusion_lists_list %}
-        <ul>
-            {% for diffusion_list in diffusion_lists_list %}
-            <li><a
-                    href="{% url 'exemple:diffusion_list_details' diffusion_list.id %}">
-                {{ diffusion_list.name }}</a></li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>Pas de groupes créés.</p>
-    {% endif %}
+</section>
 {% endblock %}
