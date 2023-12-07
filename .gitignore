@@ -1,0 +1,7 @@
+### [INSERER NOM] ###
+
+# pychache
+
+nuitinfo/exemple/__pycache__/*
+nuitinfo/nuitinfo/__pycache__/*
+**/__pycache__/*
