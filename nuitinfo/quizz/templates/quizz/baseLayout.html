@@ -1,0 +1,29 @@
+<!doctype HTML>
+{% load static %}
+<html lang="fr">
+    <head>
+        <meta charset="utf_8"/>
+        <title>Quizz</title>
+        {% block styles %}
+            <link rel="stylesheet"
+                  href="{% static 'quizz/style.css' %}"/>
+        {% endblock %}
+    </head>
+    <body>
+        <div id="mouse_tracker"></div>
+        <header>
+            {% block header %} {% endblock %}
+        </header>
+        <section>
+            {% block content %} {% endblock %}
+        </section>
+        <footer>
+            Nuit de l'info 2023 groupe [INSERER NOM]
+        </footer>
+
+        {% block js %}
+            <script type="text/javascript"
+                    src="{% static 'quizz/script.js' %}"></script>
+        {% endblock %}
+    </body>
+</html>
