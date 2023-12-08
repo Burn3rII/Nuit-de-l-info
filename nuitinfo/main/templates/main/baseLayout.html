@@ -11,21 +11,20 @@
     </head>
     <body>
         <header id="bande-top">
-
-    <div class="head-left">
-        <a href="{% url 'main:home' %}"><img src="{% static 'main/img/logo.png' %}" alt="Logo représentant un arbre" height="100px" width="100px" /></a>
-    </div>
-    <div>
-        <p id="title"><a href="{% url 'main:home' %}">► Insérer site</a></p>
-    </div>
-    <div class="head-right">
-        <ul>
-            <li id="bouton1" href><a href="{% url 'quizz:home' %}">Quizz</a></li>
-            <li id="bouton1" ><a href="{% url 'main:infos' %}">Infos</a></li>
-            <li id="bouton1" href><a href="game.html">Game</a></li>
-            <li id="param" href><img src="{% static 'main/img/snowflake.png' %}" height="50px" width="50px" /></li>
-        </ul>
-    </div>
+            <div class="head-left">
+                <a href="{% url 'main:home' %}"><img src="{% static 'main/img/logo.png' %}" alt="Logo représentant un arbre" height="100px" width="100px" /></a>
+            </div>
+            <div>
+                <p id="title"><a href="{% url 'main:home' %}">► Insérer site</a></p>
+            </div>
+            <div class="head-right">
+                <ul>
+                    <li href><a href="{% url 'quizz:home' %}">Quizz</a></li>
+                    <li ><a href="{% url 'main:infos' %}">Infos</a></li>
+                    <li href><a href="game.html">Game</a></li>
+                    <li id="param" href><img src="{% static 'main/img/snowflake.png' %}" height="50px" width="50px" /></li>
+                </ul>
+            </div>
         </header>
         {% block content %} {% endblock %}
         <footer>

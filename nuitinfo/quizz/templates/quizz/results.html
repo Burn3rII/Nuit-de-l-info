@@ -19,28 +19,30 @@
 {% endblock %}
 
 {% block content %}
-    <h1>
-        {% if question %}
-            Résultats de la question : {{ question.question_text }}
-        {% else %}
-            Cette question n'existe pas.
-        {% endif %}
-    </h1>
-    {% if choices %}
-        <ul>
-            {% for choice in choices %}
-                {% if choice.correct %}
-                <li class="correct">
-                    {{ choice.choice_text }} (Correcte)
-                </li>
-                {% else %}
-                <li class="incorrect">
-                    {{ choice.choice_text }}
-                </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-        <br/>
+    <div class="frame">
+        <h1>
+            {% if question %}
+                Résultats de la question : {{ question.question_text }}
+            {% else %}
+                Cette question n'existe pas.
+            {% endif %}
+        </h1>
+        {% if choices %}
+            <ul>
+                {% for choice in choices %}
+                    {% if choice.correct %}
+                    <li class="correct">
+                        {{ choice.choice_text }} (Correcte)
+                    </li>
+                    {% else %}
+                    <li class="incorrect">
+                        {{ choice.choice_text }}
+                    </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+    </div>
+    <div class="frame">
         {% if is_correct == 'True' %}
             <p>Votre réponse était correcte !</p>
         {% else %}
@@ -56,7 +58,8 @@
             <br/>
             <p>C'est la fin. Merci d'avoir joué !</p>
         {% endif %}
-    {% else %}
-        <p>Aucun détail disponible pour cette question.</p>
-    {% endif %}
+        {% else %}
+            <p>Aucun détail disponible pour cette question.</p>
+        {% endif %}
+    </div>
 {% endblock %}
