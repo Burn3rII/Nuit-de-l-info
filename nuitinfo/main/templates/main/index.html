@@ -1,6 +1,36 @@
 {% extends "main/baseLayout.html" %}
 {% load static %}
 
+{% block header %} 
+
+    <div class="head-left">
+        <a href="{% url 'main:home' %}"><img src="{% static 'main/img/logo.png' %}" alt="Logo représentant un arbre" height="100px" width="100px" /></a>
+    </div>
+    <div>
+        <p id="title"><a href="{% url 'main:home' %}">► Insérer site</a></p>
+    </div>
+    <div class="head-right">
+        <ul>
+            <li class="bouton" href><a href="{% url 'quizz:home' %}" >Quizz</a></li>
+            <li class="bouton" ><a>Infos</a></li>
+            <li class="bouton" href><a href="game.html">Game</a></li>
+            <li class="param" href><div class="toggle-switch">
+                <input type="checkbox" id="dark">
+                <label for="dark">
+                    <img width="25px" height="25px" src="../../static/main/img/moon-svgrepo-com.svg" alt="Light Mode" draggable="false">
+                    <img width="25px" height="25px" src="../../static/main/img/iconizer-christmas-tree-9-svgrepo-com (1).svg" alt="Dark Mode" draggable="false">
+                </label>
+            </div>
+            <script>
+                var dark = document.getElementById("dark");
+                dark.onclick = function(){
+                    document.body.classList.toggle("christmas-theme");
+                }
+            </script>
+            </ul>
+    </div>
+{%endblock %}
+
 {% block content %}
 <section >
     
