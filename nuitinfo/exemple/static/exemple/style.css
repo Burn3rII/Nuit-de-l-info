@@ -27,13 +27,18 @@ body{
     margin-top: 10%;
 }
 #title{
-    margin: 90% 0%;
+    margin: 40% 0%;
     text-align:center;
     display: inline-block;
-    margin-bottom: 25%;
+    margin-bottom: 10%;
+
 }
 
-
+#title a{
+    text-decoration: none;
+    font-size:30px;
+    font-family: Roboto;
+}
 .head-left{
     display: inline-block;
     width:15%;
@@ -58,7 +63,7 @@ body{
     border-style:solid;
     border-color:lightgreen;
     background-color: green;
-    padding:15%;
+    padding:10%;
     border-radius:25%;
 }
 
@@ -103,4 +108,3 @@ footer p{
     padding-bottom: 0%;
 }
 
-/*test*/
