@@ -4,7 +4,7 @@
 {% block header %} 
 
     <div class="head-left">
-        <img src="{% static 'main/img/logo.png' %}" alt="Logo représentant un arbre" height="100px" width="100px" />
+        <a href="{% url 'main:home' %}"><img src="{% static 'main/img/logo.png' %}" alt="Logo représentant un arbre" height="100px" width="100px" /></a>
     </div>
     <div>
         <p id="title"><a href="{% url 'main:home' %}">Worst site</a></p>
