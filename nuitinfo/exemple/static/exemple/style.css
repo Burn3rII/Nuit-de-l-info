@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -26,11 +27,12 @@ body{
     margin-top: 10%;
 }
 #title{
-    margin: 80% 0%;
+    margin: 90% 0%;
     text-align:center;
     display: inline-block;
-    
+    margin-bottom: 25%;
 }
+
 
 .head-left{
     display: inline-block;
@@ -49,7 +51,7 @@ body{
 }
 .head-right ul li{
     display:inline-block;
-    padding: 5%;
+    padding: 8%;
 }
 .head-right ul li a{
     text-decoration: none;
@@ -61,12 +63,16 @@ body{
 }
 
 section{
-    background-image: linear-gradient(45deg,rgba(255, 0, 0, 0.902), rgb(46, 9, 46));
+    background-image: url(./img/snow.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100%;
-    padding: 30px 0px 30px 0px;
-}
+    /*padding: 30px 0px 30px 0px;*/
+    padding: 2% 0%;
+}   
 section div {
-    padding: 10px 20px ;
+    /*padding: 10px 20px ;*/
+    padding: 3% 2% ;
     background-image: linear-gradient(180deg,rgb(32, 85, 32),rgb(105, 105, 105));
     margin:2% 5%;
     text-align: center;
@@ -81,9 +87,7 @@ section div img{
 }
 
 footer{
-    position: fixed;
-    bottom: 0%;
-    /*left: 5%;*/
+    bottom: 0;
     background-color:rgb(32, 85, 32);
     width: 100%;
     height: 2.5%;
