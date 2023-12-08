@@ -1,0 +1,41 @@
+{% extends "main/baseLayout.html" %}
+{% load static %}
+
+{% block content %}
+<section >
+    <div id="quoi">
+        <h1>Qu'est-ce quoi ?</h1>
+        <br/>
+        <p>Nous sommes des étudiants à l'ENSISA en spécialité Informatique et Réseaux de 1ere année.
+        Ce site a été conçu dans le cadre de l'événement international La nuit de l'info (édition 2023) sur le thème du changement climatique.</p>
+        <img src="{% static 'main/img/sujet1.jpg' %}"
+             alt="Photo 1 du sujet">
+        <img src="{% static 'main/img/sujet2.jpg' %}"
+             alt="Photo 2 du sujet">
+    </div>
+
+    <div>
+        <h1>Qu'est-ce qui ?</h1>
+        <div id="divgauchedroite">
+        <div>
+        <br/>
+        <p>Les membres de l'équipe :</p>
+        <br/>
+        <ul>
+            <li>Maxime Sanciaume</li>
+            <li>Romain Bomba</li>
+            <li>Quentin Girardat</li>
+            <li>Simon Antropius</li>
+            <li>Louis Sénéchal</li>
+            <li>Benjamin Carbon</li>
+            <li>Louis Augey</li>
+            <li>Harry Eslinger</li>
+            <li>Maxence Desmonteix</li>
+        </ul>
+        </div>
+        <img src="{% static 'main/img/groupe.jpg' %}"
+             alt="Photo du groupe">
+        </div>
+    </div>
+</section>
+{% endblock %}
