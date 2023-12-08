@@ -1,24 +1,6 @@
 {% extends "main/baseLayout.html" %}
 {% load static %}
 
-{% block header %} 
-
-    <div class="head-left">
-        <a href="{% url 'main:home' %}"><img src="{% static 'main/img/logo.png' %}" alt="Logo représentant un arbre" height="100px" width="100px" /></a>
-    </div>
-    <div>
-        <p id="title"><a href="{% url 'main:home' %}">► Insérer site</a></p>
-    </div>
-    <div class="head-right">
-        <ul>
-            <li id="bouton1" href><a href="{% url 'quizz:home' %}">Quizz</a></li>
-            <li id="bouton1" ><a>Infos</a></li>
-            <li id="bouton1" href><a href="game.html">Game</a></li>
-            <li id="param" href><img src="{% static 'main/img/snowflake.png' %}" height="50px" width="50px" /></li>
-        </ul>
-    </div>
-{%endblock %}
-
 {% block content %}
 <section >
     
