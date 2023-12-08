@@ -109,7 +109,6 @@ section{
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    /*padding: 30px 0px 30px 0px;*/
     padding: 2% 0%;
     transition: 0.3s;
     -o-transition: 0.3s;
@@ -119,7 +118,6 @@ section{
 }
 
 section > div:nth-child(odd){
-    /*padding: 10px 20px ;*/
     padding: 3% 2% ;
     background-image: var(--paragraphe1);
     margin:2% 5%;
@@ -135,7 +133,6 @@ section > div:nth-child(odd){
 }
 
 section > div:nth-child(even) {
-    /*padding: 10px 20px ;*/
     padding: 3% 2% ;
     background-image: var(--paragraphe2);
     margin:2% 5%;
@@ -169,7 +166,6 @@ footer{
 }
 
 footer p{
-    /*padding: auto;*/
     text-align: center;
     height: 100%;
     line-height: 100%;
