@@ -1,0 +1,37 @@
+{% extends "quizz/baseLayout.html" %}
+{% load static %}
+
+{% block header %}
+<div id="banner">
+    <a href="index.html" id="home_link" data_translate_title="tooltip_home">
+        <img src="{% static 'quizz/images/icone_maison.png' %}" alt="Retour accueil" id="home_icon">
+    </a>
+
+    <div class="title_container">
+      <p>Bienvenue dans</p>
+      <div class="title_animation">
+        <div class="first_title"><div>the quizz</div></div>
+        <div class="second_title"><div>le jeu par questions et réponses</div></div>
+        <div class="third_title"><div>das quiz</div></div>
+      </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'quizz:vote' question.id %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend><h1>{{ question.question_text }}</h1></legend>
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+        {% for choice in question.choice_set.all %}
+            <input type="radio" name="choice" id="choice{{ forloop.counter }}"
+                   value="{{ choice.id }}">
+            <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+        {% endfor %}
+    </fieldset>
+    <div class="form_button">
+        <input type="submit" value="Valider">
+    </div>
+    </form>
+{% endblock %}

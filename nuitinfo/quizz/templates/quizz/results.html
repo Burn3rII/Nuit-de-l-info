@@ -1,0 +1,62 @@
+{% extends "quizz/baseLayout.html" %}
+{% load static %}
+
+{% block header %}
+<div id="banner">
+    <a href="index.html" id="home_link" data_translate_title="tooltip_home">
+        <img src="{% static 'quizz/images/icone_maison.png' %}" alt="Retour accueil" id="home_icon">
+    </a>
+
+    <div class="title_container">
+      <p>Bienvenue dans</p>
+      <div class="title_animation">
+        <div class="first_title"><div>the quizz</div></div>
+        <div class="second_title"><div>le jeu par questions et réponses</div></div>
+        <div class="third_title"><div>das quiz</div></div>
+      </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <h1>
+        {% if question %}
+            Résultats de la question : {{ question.question_text }}
+        {% else %}
+            Cette question n'existe pas.
+        {% endif %}
+    </h1>
+    {% if choices %}
+        <ul>
+            {% for choice in choices %}
+                {% if choice.correct %}
+                <li class="correct">
+                    {{ choice.choice_text }} (Correcte)
+                </li>
+                {% else %}
+                <li class="incorrect">
+                    {{ choice.choice_text }}
+                </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        <br/>
+        {% if is_correct == 'True' %}
+            <p>Votre réponse était correcte !</p>
+        {% else %}
+            <p>Votre réponse était incorrecte.</p>
+        {% endif %}
+        <br/>
+        <p>L'explication : {{ question.explanation }}</p>
+        {% if next_question %}
+            <br/>
+            <a href="{% url 'quizz:detail' next_question.id %}"
+               class="inline_link">Prochaine question</a>
+        {% else %}
+            <br/>
+            <p>C'est la fin. Merci d'avoir joué !</p>
+        {% endif %}
+    {% else %}
+        <p>Aucun détail disponible pour cette question.</p>
+    {% endif %}
+{% endblock %}
