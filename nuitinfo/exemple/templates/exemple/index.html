@@ -7,12 +7,12 @@
         <img src="{% static 'exemple/img/logo.png' %}" alt="Logo représentant un arbre" height="100px" width="100px" />
     </div>
     <div>
-        <p id="title">Worst site</p>
+        <p id="title"><a href="{% url 'exemple:home' %}">Worst site</a></p>
     </div>
     <div class="head-right">
         <ul>
-            <li id="bouton1" href><a>Quizz</a></li>
-            <li id="bouton1" href><a>Infos</a></li>
+            <li id="bouton1" href><a href="{% url 'quizz:home' %}">Quizz</a></li>
+            <li id="bouton1" ><a>Infos</a></li>
             <li id="bouton1" href><a href="game.html">Game</a></li>
             <li id="param" href><img src="{% static 'exemple/img/snowflake.png' %}" height="50px" width="50px" /></li>
         </ul>
